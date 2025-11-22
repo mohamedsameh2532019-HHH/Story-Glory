@@ -1,58 +1,101 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Story Glory — صفحة كاملة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Story Glory — مكتبة إلكترونية لتحميل الكتب والروايات PDF">
+  <meta name="keywords" content="كتب, روايات, قصص, PDF, تحميل">
+  <meta name="author" content="Story Glory">
+  <title>Story Glory — الرئيسية</title>
 </head>
 <body>
 
   <!-- Header -->
+
   <header>
-    <span>Story Glory</span> <!-- اسم الموقع -->
+    <h1>Story Glory</h1>
   </header>
 
   <!-- Navbar -->
+
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="books.html">Books</a></li>
-      <li><a href="#categories">Categories</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#books">الكتب</a></li>
+      <li><a href="#categories">التصنيفات</a></li>
+      <li><a href="#about">من نحن</a></li>
     </ul>
   </nav>
 
   <!-- Main Content -->
+
   <main>
-    <!-- Home / Hero Section -->
-    <section id="home">
-      <h1>مرحبا بك في Story Glory</h1>
-      <p>حمّل روايات، قصص وكتب PDF بسهولة.</p>
-      <p><a href="books.html">استكشف المكتبة</a></p>
-    </section>
 
-    <!-- Categories Section -->
-    <section id="categories">
-      <h2>Categories</h2>
-      <ul>
-        <li>Novels</li>
-        <li>Short Stories</li>
-        <li>History</li>
-        <li>Self-Development</li>
-        <li>Horror</li>
-        <li>Science Fiction</li>
-      </ul>
-    </section>
+```
+<!-- Hero Section -->
+<section id="home">
+  <h2>مرحباً بك في Story Glory</h2>
+  <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
+  <a href="#books">استكشف الكتب الآن</a>
+</section>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>Story Glory is a digital library to download books and stories in PDF.</p>
-    </section>
+<!-- Categories Section -->
+<section id="categories">
+  <h2>التصنيفات</h2>
+  <ul>
+    <li><a href="novels.html">روايات</a></li>
+    <li><a href="stories.html">قصص قصيرة</a></li>
+    <li><a href="history.html">تاريخ</a></li>
+    <li><a href="selfdev.html">تنمية ذاتية</a></li>
+    <li><a href="horror.html">رعب</a></li>
+    <li><a href="scifi.html">خيال علمي</a></li>
+  </ul>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2>من نحن</h2>
+  <p>Story Glory هي مكتبة إلكترونية مجانية تتيح لك تحميل الكتب، الروايات والقصص بصيغة PDF بسهولة وسرعة.</p>
+</section>
+
+<!-- Books Section -->
+<section id="books">
+  <h2>الكتب المتاحة للقراءة والتحميل</h2>
+
+  <div class="book-card">
+    <img src="images/book1.jpg" alt="غلاف الكتاب الأول">
+    <h3>اسم الكتاب الأول</h3>
+    <p>وصف مختصر عن الكتاب يوضع هنا.</p>
+    <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
+    <a href="pdf/book1.pdf" download>تحميل</a>
+    <div id="reader1" style="display:none; margin-top:10px;">
+      <iframe src="pdf/book1.pdf" width="100%" height="600px"></iframe>
+      <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <img src="images/book2.jpg" alt="غلاف الكتاب الثاني">
+    <h3>اسم الكتاب الثاني</h3>
+    <p>وصف مختصر عن الكتاب يوضع هنا.</p>
+    <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
+    <a href="pdf/book2.pdf" download>تحميل</a>
+    <div id="reader2" style="display:none; margin-top:10px;">
+      <iframe src="pdf/book2.pdf" width="100%" height="600px"></iframe>
+      <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+    </div>
+  </div>
+
+</section>
+```
+
   </main>
 
   <!-- Footer -->
+
   <footer>
-    <p>© 2025 Story Glory</p>
+    <p>© 2025 Story Glory — جميع الحقوق محفوظة</p>
   </footer>
 
 </body>
