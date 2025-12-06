@@ -1,0 +1,169 @@
+
+/* متغيرات الألوان */
+:root {
+  --bg: #f5f7fa;
+  --text: #222;
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --dark-bg: #0f1217;
+  --dark-text: #eaeef6;
+  --transition: 0.3s ease;
+}
+
+/* الوضع الافتراضي (فاتح) */
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: var(--transition);
+  direction: rtl;
+}
+
+/* الوضع الداكن */
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* زرار السويتش */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* الهيدر */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+
+/* النافبار */
+nav {
+  background: #1e293b;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav li {
+  margin: 0.3rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+nav a:hover {
+  background: #334155;
+}
+
+/* الأقسام */
+section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+section h2 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+section p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+/* التصنيفات */
+#categories ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+#categories li a {
+  background: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  transition: 0.2s;
+}
+#categories li a:hover {
+  background: #cbd5e1;
+}
+
+/* بطاقات الكتب */
+.book-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.book-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+.book-card h3 {
+  margin: 0.5rem 0;
+}
+.book-card p {
+  color: #555;
+}
+.book-card button,
+.book-card a {
+  display: inline-block;
+  margin: 0.4rem 0.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.book-card button {
+  background: var(--primary);
+  color: #fff;
+}
+.book-card button:hover {
+  background: #2563eb;
+}
+.book-card a {
+  background: var(--secondary);
+  color: #fff;
+}
+.book-card a:hover {
+  background: #059669;
+}
+
+/* الفوتر */
+footer {
+  background: #1e293b;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

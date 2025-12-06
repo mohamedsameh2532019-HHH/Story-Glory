@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -8,17 +8,20 @@
   <meta name="keywords" content="كتب, روايات, قصص, PDF, تحميل">
   <meta name="author" content="Story Glory">
   <title>Story Glory — الرئيسية</title>
+  <!-- ربط ملف التنسيق -->
+  <link rel="stylesheet" href="story_glory_style.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- زرار تبديل الثيم -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
+  <!-- Header -->
   <header>
     <h1>Story Glory</h1>
   </header>
 
   <!-- Navbar -->
-
   <nav>
     <ul>
       <li><a href="#home">الرئيسية</a></li>
@@ -29,74 +32,87 @@
   </nav>
 
   <!-- Main Content -->
-
   <main>
 
-```
-<!-- Hero Section -->
-<section id="home">
-  <h2>مرحباً بك في Story Glory</h2>
-  <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
-  <a href="#books">استكشف الكتب الآن</a>
-</section>
+    <!-- Hero Section -->
+    <section id="home">
+      <h2>مرحباً بك في Story Glory</h2>
+      <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
+      <a href="#books">استكشف الكتب الآن</a>
+    </section>
 
-<!-- Categories Section -->
-<section id="categories">
-  <h2>التصنيفات</h2>
-  <ul>
-    <li><a href="novels.html">روايات</a></li>
-    <li><a href="stories.html">قصص قصيرة</a></li>
-    <li><a href="history.html">تاريخ</a></li>
-    <li><a href="selfdev.html">تنمية ذاتية</a></li>
-    <li><a href="horror.html">رعب</a></li>
-    <li><a href="scifi.html">خيال علمي</a></li>
-  </ul>
-</section>
+    <!-- Categories Section -->
+    <section id="categories">
+      <h2>التصنيفات</h2>
+      <ul>
+        <li><a href="novels.html">روايات</a></li>
+        <li><a href="stories.html">قصص قصيرة</a></li>
+        <li><a href="history.html">تاريخ</a></li>
+        <li><a href="selfdev.html">تنمية ذاتية</a></li>
+        <li><a href="horror.html">رعب</a></li>
+        <li><a href="scifi.html">خيال علمي</a></li>
+      </ul>
+    </section>
 
-<!-- About Section -->
-<section id="about">
-  <h2>من نحن</h2>
-  <p>Story Glory هي مكتبة إلكترونية مجانية تتيح لك تحميل الكتب، الروايات والقصص بصيغة PDF بسهولة وسرعة.</p>
-</section>
+    <!-- About Section -->
+    <section id="about">
+      <h2>من نحن</h2>
+      <p>Story Glory هي مكتبة إلكترونية مجانية تتيح لك تحميل الكتب، الروايات والقصص بصيغة PDF بسهولة وسرعة.</p>
+    </section>
 
-<!-- Books Section -->
-<section id="books">
-  <h2>الكتب المتاحة للقراءة والتحميل</h2>
+    <!-- Books Section -->
+    <section id="books">
+      <h2>الكتب المتاحة للقراءة والتحميل</h2>
 
-  <div class="book-card">
-    <img src="images/book1.jpg" alt="غلاف الكتاب الأول">
-    <h3>اسم الكتاب الأول</h3>
-    <p>وصف مختصر عن الكتاب يوضع هنا.</p>
-    <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
-    <a href="pdf/book1.pdf" download>تحميل</a>
-    <div id="reader1" style="display:none; margin-top:10px;">
-      <iframe src="pdf/book1.pdf" width="100%" height="600px"></iframe>
-      <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
-    </div>
-  </div>
+      <div class="book-card">
+        <img src="images/book1.jpg" alt="غلاف الكتاب الأول">
+        <h3>اسم الكتاب الأول</h3>
+        <p>وصف مختصر عن الكتاب يوضع هنا.</p>
+        <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
+        <a href="pdf/book1.pdf" download>تحميل</a>
+        <div id="reader1" style="display:none; margin-top:10px;">
+          <iframe src="pdf/book1.pdf" width="100%" height="600px"></iframe>
+          <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+        </div>
+      </div>
 
-  <div class="book-card">
-    <img src="images/book2.jpg" alt="غلاف الكتاب الثاني">
-    <h3>اسم الكتاب الثاني</h3>
-    <p>وصف مختصر عن الكتاب يوضع هنا.</p>
-    <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
-    <a href="pdf/book2.pdf" download>تحميل</a>
-    <div id="reader2" style="display:none; margin-top:10px;">
-      <iframe src="pdf/book2.pdf" width="100%" height="600px"></iframe>
-      <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
-    </div>
-  </div>
+      <div class="book-card">
+        <img src="images/book2.jpg" alt="غلاف الكتاب الثاني">
+        <h3>اسم الكتاب الثاني</h3>
+        <p>وصف مختصر عن الكتاب يوضع هنا.</p>
+        <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
+        <a href="pdf/book2.pdf" download>تحميل</a>
+        <div id="reader2" style="display:none; margin-top:10px;">
+          <iframe src="pdf/book2.pdf" width="100%" height="600px"></iframe>
+          <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+        </div>
+      </div>
 
-</section>
-```
+    </section>
 
   </main>
 
   <!-- Footer -->
-
   <footer>
     <p>© 2025 Story Glory — جميع الحقوق محفوظة</p>
   </footer>
+
+  <!-- JavaScript لتبديل الثيم -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      // تغيير الأيقونة حسب الوضع
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
 
 </body>
 </html>
