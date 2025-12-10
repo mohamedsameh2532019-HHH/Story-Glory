@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Glory — قسم القصص القصيرة</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stories.css">
+</head>
+<body class="stories">
+
+  <!-- Header -->
+  <header>
+    <h1 class="section-title">قسم القصص القصيرة</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="novels.html">روايات</a>
+      <a href="stories.html" class="active">قصص قصيرة</a>
+      <a href="history.html">تاريخ</a>
+      <a href="selfdev.html">تنمية ذاتية</a>
+      <a href="horror.html">رعب</a>
+      <a href="scifi.html">خيال علمي</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="books">
+      <h2>📖 قصص قصيرة</h2>
+
+      <!-- قصة 1 -->
+      <div class="book-card">
+        <img src="images/story1.jpg" alt="غلاف قصة قصيرة 1">
+        <h3>قصة</h3>
+        <p>وصف مختصر يوضع هنا.</p>
+        <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
+        <a href="pdf/stories/story1.pdf" download>تحميل</a>
+        <div id="reader1" style="display:none; margin-top:10px;">
+          <iframe src="pdf/stories/story1.pdf" width="100%" height="600px"></iframe>
+          <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+        </div>
+      </div>
+
+      <!-- قصة 2 -->
+      <div class="book-card">
+        <img src="images/story2.jpg" alt="غلاف قصة قصيرة 2">
+        <h3>قصة</h3>
+        <p>وصف مختصر يوضع هنا.</p>
+        <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
+        <a href="pdf/stories/story2.pdf" download>تحميل</a>
+        <div id="reader2" style="display:none; margin-top:10px;">
+          <iframe src="pdf/stories/story2.pdf" width="100%" height="600px"></iframe>
+          <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+        </div>
+      </div>
+
+      <!-- قصة 3 -->
+      <div class="book-card">
+        <img src="images/story3.jpg" alt="غلاف قصة قصيرة 3">
+        <h3>قصة</h3>
+        <p>وصف مختصر يوضع هنا.</p>
+        <button onclick="document.getElementById('reader3').style.display='block'">قراءة</button>
+        <a href="pdf/stories/story3.pdf" download>تحميل</a>
+        <div id="reader3" style="display:none; margin-top:10px;">
+          <iframe src="pdf/stories/story3.pdf" width="100%" height="600px"></iframe>
+          <button onclick="document.getElementById('reader3').style.display='none'">إغلاق القراءة</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
