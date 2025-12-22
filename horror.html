@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="horror.css" />
 </head>
 <body>
+
+  <!-- زر الوضع الداكن -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
   <!-- رأس الصفحة -->
   <header>
     <h1>Story Glory</h1>
@@ -26,42 +30,80 @@
   <!-- محتوى الصفحة -->
   <main>
     <h2>قسم الرعب 👻</h2>
+
     <div class="cards-container">
 
       <!-- القصة الأولى -->
-      <div class="card">
-        <img src="images/أذكار الموت.jpg">
-        <h3>أذكار الموت</h3>
-        <p>أذكار الموت هي رواية غموض وإثارة عن كاتب يُعاني من مرض السرطان ويقرر أن يكتب روايته الأخيرة عن قاتل متسلسل يعيش في القاهرة لا تلمحه الشرطة لأنه يغيّر مسار جرائمه بذكاء. عندما يعرف الكاتب تفاصيل أكثر من اللازم عنه، يبدأ بتتبعه بنفسه بينما لا يصدّقه أحد، وتتكشف أسرار نفسية وعلاقات معقدة مع المرض والحياة والمجتمع.</p>
-        <div class="buttons">
-          <a href="pdfs/أذكار الموت.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/أذكار الموت.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/أذكار الموت.jpg" alt="أذكار الموت">
+        <div>
+          <h3>أذكار الموت</h3>
+          <p>
+            أذكار الموت هي رواية غموض وإثارة عن كاتب يُعاني من مرض السرطان ويقرر أن يكتب روايته الأخيرة عن قاتل
+            متسلسل يعيش في القاهرة لا تلمحه الشرطة لأنه يغيّر مسار جرائمه بذكاء. عندما يعرف الكاتب تفاصيل أكثر من
+            اللازم عنه، يبدأ بتتبعه بنفسه بينما لا يصدّقه أحد، وتتكشف أسرار نفسية وعلاقات معقدة مع المرض والحياة
+            والمجتمع.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/أذكار الموت.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/أذكار الموت.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
       <!-- القصة الثانية -->
-      <div class="card">
-        <img src="images/الجزار.jpg">
-        <h3>الجزار</h3>
-        <p>تدور الرواية حول شاب يُدعى (يوسف) يجد نفسه متورّطًا في سلسلة جرائم مرعبة بعد أن يسكن في شقة غامضة ترتبط بماضي "الجزار" — قاتل شرس كان يرتكب طقوسًا دموية. يبدأ يوسف في اكتشاف أسرار مرعبة تخص القاتل والشقة نفسها، ويدخل في صراع نفسي بين الحقيقة والهلوسة، بينما تتصاعد الأحداث حتى يواجه الشرّ الذي ظل مختبئًا لسنوات.</p>
-        <div class="buttons">
-          <a href="pdfs/الجزار.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/الجزار.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/الجزار.jpg" alt="الجزار">
+        <div>
+          <h3>الجزار</h3>
+          <p>
+            تدور الرواية حول شاب يُدعى (يوسف) يجد نفسه متورّطًا في سلسلة جرائم مرعبة بعد أن يسكن في شقة غامضة ترتبط
+            بماضي "الجزار" — قاتل شرس كان يرتكب طقوسًا دموية. يبدأ يوسف في اكتشاف أسرار مرعبة تخص القاتل والشقة
+            نفسها، ويدخل في صراع نفسي بين الحقيقة والهلوسة، بينما تتصاعد الأحداث حتى يواجه الشرّ الذي ظل مختبئًا
+            لسنوات.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/الجزار.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/الجزار.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
       <!-- القصة الثالثة -->
-      <div class="card">
-        <img src="images/it.jpg">
-        <h3>it</h3>
-        <p>A group of children in the town of Derry fight a shape-shifting evil creature that often appears as the clown Pennywise. Twenty-seven years later, the monster returns, and the now-grown friends reunite to face the same terror and try to destroy it forever.</p>
-        <div class="buttons">
-          <a href="pdfs/It - Stephen King.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/It - Stephen King.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/it.jpg" alt="It">
+        <div>
+          <h3>It</h3>
+          <p>
+            A group of children in the town of Derry fight a shape-shifting evil creature that often appears as the clown
+            Pennywise. Twenty-seven years later, the monster returns, and the now-grown friends reunite to face the same
+            terror and try to destroy it forever.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/It - Stephen King.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/It - Stephen King.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
     </div>
   </main>
+
+  <!-- سكريبت الوضع الداكن -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
+
 </body>
 </html>

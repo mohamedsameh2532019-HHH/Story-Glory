@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="history.css" />
 </head>
 <body>
+
+  <!-- زر الوضع الداكن -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- رأس الصفحة -->
   <header>
     <h1>Story Glory</h1>
     <nav>
@@ -22,39 +27,78 @@
     </nav>
   </header>
 
+  <!-- محتوى الصفحة -->
   <main>
     <h2>قسم التاريخ 📚</h2>
+
     <div class="cards-container">
-      <div class="card">
-        <img src="images/تاريخ مصر القديمة.jpg">
-        <h3>عصرما قبل التاريخ إلى نهاية العصرالإهناسي</h3>
-        <p>الكتاب يقدّم تاريخ مصر منذ نشأة الحضارة وتوحيد البلاد، مرورًا بعصور الدولة القديمة والوسطى والحديثة، موضحًا إنجازات المصريين مثل بناء الأهرامات وحياتهم الدينية والاجتماعية.</p>
-        <div class="buttons">
-          <a href="pdfs/عصر ما قبل التاريخ إلى نهاية العصرالإهناسي.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/عصر ما قبل التاريخ إلى نهاية العصرالإهناسي.pdf" class="download-btn">تحميل</a>
+
+      <!-- الكتاب الأول -->
+      <div class="card horizontal">
+        <img src="images/تاريخ مصر القديمة.jpg" alt="تاريخ مصر القديمة">
+        <div>
+          <h3>عصر ما قبل التاريخ إلى نهاية العصر الإهناسي</h3>
+          <p>
+            الكتاب يقدّم تاريخ مصر منذ نشأة الحضارة وتوحيد البلاد، مرورًا بعصور الدولة القديمة والوسطى والحديثة،
+            موضحًا إنجازات المصريين مثل بناء الأهرامات وحياتهم الدينية والاجتماعية.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/عصر ما قبل التاريخ إلى نهاية العصرالإهناسي.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/عصر ما قبل التاريخ إلى نهاية العصرالإهناسي.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <img src="images/مقدمة ابن خلدون.jpg">
-        <h3>مقدمة ابن خلدون</h3>
-        <p>يعرض ابن خلدون في مقدمته كيفية نشوء الدول وسقوطها، ويؤكد أن العصبية أساس قيامها، وأن العمران والاقتصاد والمناخ يؤثرون في تطور المجتمعات وسلوك البشر.</p>
-        <div class="buttons">
-          <a href="pdfs/مقدمة ابن خلدون.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/مقدمة ابن خلدون.pdf" class="download-btn">تحميل</a>
+      <!-- الكتاب الثاني -->
+      <div class="card horizontal">
+        <img src="images/مقدمة ابن خلدون.jpg" alt="مقدمة ابن خلدون">
+        <div>
+          <h3>مقدمة ابن خلدون</h3>
+          <p>
+            يعرض ابن خلدون في مقدمته كيفية نشوء الدول وسقوطها، ويؤكد أن العصبية أساس قيامها، وأن العمران والاقتصاد
+            والمناخ يؤثرون في تطور المجتمعات وسلوك البشر.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/مقدمة ابن خلدون.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/مقدمة ابن خلدون.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <img src="images/The Silk Roads.jpg">
-        <h3>The Silk Roads</h3>
-        <p>The book explains how the Silk Roads—trade routes linking Asia, the Middle East, and Europe—shaped world history by spreading goods, religions, ideas, and power, making the East a central driver of global civilization.</p>
-        <div class="buttons">
-          <a href="pdfs/The Silk Roads.pdf" class="read-btn" target="_blank">قراءة</a>
-          <a href="pdfs/The Silk Roads.pdf" class="download-btn">تحميل</a>
+      <!-- الكتاب الثالث -->
+      <div class="card horizontal">
+        <img src="images/The Silk Roads.jpg" alt="The Silk Roads">
+        <div>
+          <h3>The Silk Roads</h3>
+          <p>
+            The book explains how the Silk Roads—trade routes linking Asia, the Middle East, and Europe—shaped world history
+            by spreading goods, religions, ideas, and power, making the East a central driver of global civilization.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/The Silk Roads.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/The Silk Roads.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
+
+  <!-- سكريبت الوضع الداكن -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
+
 </body>
 </html>

@@ -1,18 +1,22 @@
+/* إعدادات أساسية */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background: url("images/horror-bg.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: #000; /* النص غامق في الوضع العادي */
   direction: rtl;
 }
 
+/* رأس الصفحة */
 header {
-  background-color: rgba(34,34,34,0.8);
+  background-color: rgba(255,255,255,0.85); /* فاتح */
   padding: 20px;
   text-align: center;
+  color: #000;
 }
 
+/* شريط التنقل */
 nav ul {
   list-style: none;
   padding: 0;
@@ -22,7 +26,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   padding: 5px 10px;
 }
@@ -30,45 +34,70 @@ nav a {
 nav a.active {
   background-color: crimson;
   border-radius: 5px;
+  color: #fff;
 }
 
+/* المحتوى الرئيسي */
 main {
   padding: 20px;
   text-align: center;
+  color: #000;
 }
 
+/* حاوية الكروت */
 .cards-container {
-  display: flex;
-  flex-direction: column; /* عمودي */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  align-items: center;
   margin-top: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* الكارت */
 .card {
-  background-color: rgba(34,34,34,0.85);
+  background-color: rgba(255,255,255,0.85); /* فاتح */
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(255,0,0,0.6);
-  text-align: center;
+  box-shadow: 0 0 15px rgba(220,20,60,0.3); /* ظل أحمر */
+  text-align: right;
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: #000;
 }
 
+/* صورة الكتاب */
+.card img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* عنوان الكتاب */
 .card h3 {
   margin: 10px 0;
   color: crimson;
+  font-size: 1.1rem;
 }
 
+/* وصف الكتاب */
 .card p {
   font-size: 14px;
-  color: #ccc;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* أزرار القراءة والتحميل */
 .buttons {
   margin-top: 10px;
 }
 
-.read-btn, .download-btn {
+.read-btn,
+.download-btn {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
@@ -79,6 +108,74 @@ main {
   transition: 0.3s;
 }
 
-.read-btn:hover, .download-btn:hover {
+.read-btn:hover,
+.download-btn:hover {
+  background-color: darkred;
+}
+
+/* زر تبديل الثيم */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+/* -------------------------------------------------- */
+/*                 🌙 الوضع الداكن (Dark Mode)        */
+/* -------------------------------------------------- */
+
+body.dark {
+  color: #eaeef6;
+}
+
+/* الهيدر */
+body.dark header {
+  background-color: rgba(20,20,20,0.9);
+  color: #fff;
+}
+
+/* الروابط */
+body.dark nav a {
+  color: #eee;
+}
+
+body.dark nav a.active {
+  background-color: crimson;
+  color: #fff;
+}
+
+/* الكروت */
+body.dark .card {
+  background-color: rgba(20,20,20,0.85); /* غامق */
+  box-shadow: 0 0 15px rgba(220,20,60,0.6);
+  color: #fff;
+}
+
+/* العناوين */
+body.dark .card h3 {
+  color: crimson;
+}
+
+/* النصوص */
+body.dark .card p {
+  color: #ddd;
+}
+
+/* الأزرار */
+body.dark .read-btn,
+body.dark .download-btn {
+  background-color: crimson;
+}
+
+body.dark .read-btn:hover,
+body.dark .download-btn:hover {
   background-color: darkred;
 }

@@ -4,15 +4,16 @@ body {
   font-family: 'Arial', sans-serif;
   background: url("images/self-development.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: #000; /* النص غامق في الوضع العادي */
   direction: rtl;
 }
 
 /* رأس الصفحة */
 header {
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: rgba(255,255,255,0.85); /* فاتح */
   padding: 20px;
   text-align: center;
+  color: #000;
 }
 
 /* شريط التنقل */
@@ -25,7 +26,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   padding: 5px 10px;
 }
@@ -33,43 +34,61 @@ nav a {
 nav a.active {
   background-color: green;
   border-radius: 5px;
+  color: #fff;
 }
 
 /* المحتوى الرئيسي */
 main {
   padding: 20px;
   text-align: center;
+  color: #000;
 }
 
 /* حاوية الكروت */
 .cards-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  align-items: center;
   margin-top: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* الكارت الفردي */
+/* الكارت */
 .card {
-  background-color: rgba(34, 34, 34, 0.85);
+  background-color: rgba(255,255,255,0.85); /* فاتح */
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-  text-align: center;
+  box-shadow: 0 0 15px rgba(0,255,0,0.3);
+  text-align: right;
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: #000;
+}
+
+/* صورة الكتاب */
+.card img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* عنوان الكتاب */
 .card h3 {
   margin: 10px 0;
-  color: lightgreen;
+  color: green;
+  font-size: 1.1rem;
 }
 
 /* وصف الكتاب */
 .card p {
   font-size: 14px;
-  color: #ccc;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* أزرار القراءة والتحميل */
@@ -101,29 +120,62 @@ main {
   left: 10px;
   padding: 10px;
   font-size: 18px;
-  background-color: #222;
+  background-color: green;
   color: #fff;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 999;
 }
 
-/* الوضع الليلي */
+/* -------------------------------------------------- */
+/*                 🌙 الوضع الداكن (Dark Mode)        */
+/* -------------------------------------------------- */
+
 body.dark {
-  background-color: #111;
+  color: #eaeef6;
+}
+
+/* الهيدر */
+body.dark header {
+  background-color: rgba(20,20,20,0.9);
+  color: #fff;
+}
+
+/* الروابط */
+body.dark nav a {
   color: #eee;
 }
 
-body.dark .card {
-  background-color: rgba(0, 0, 0, 0.8);
+body.dark nav a.active {
+  background-color: green;
+  color: #fff;
 }
 
+/* الكروت */
+body.dark .card {
+  background-color: rgba(20,20,20,0.85); /* غامق */
+  box-shadow: 0 0 15px rgba(0,255,0,0.5);
+  color: #fff;
+}
+
+/* العناوين */
+body.dark .card h3 {
+  color: lightgreen;
+}
+
+/* النصوص */
+body.dark .card p {
+  color: #ddd;
+}
+
+/* الأزرار */
 body.dark .read-btn,
 body.dark .download-btn {
-  background-color: #444;
+  background-color: green;
 }
 
 body.dark .read-btn:hover,
 body.dark .download-btn:hover {
-  background-color: #666;
+  background-color: darkgreen;
 }

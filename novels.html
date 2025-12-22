@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="novels.css" />
 </head>
 <body>
+
+  <!-- زر الوضع الداكن -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
   <!-- رأس الصفحة -->
   <header>
     <h1>Story Glory</h1>
@@ -26,42 +30,77 @@
   <!-- محتوى الصفحة -->
   <main>
     <h2>قسم الروايات 📖</h2>
+
     <div class="cards-container">
 
       <!-- الرواية الأولى -->
-      <div class="card">
-        <img src="images/عمارة يعقوبيان.jpg">
-        <h3>عمارة يعقوبيان</h3>
-        <p>تدور الرواية داخل عمارة قديمة في وسط القاهرة، وتعرض حياة سكانها من طبقات مختلفة؛ تكشف الفساد السياسي، والفوارق الاجتماعية، وصراع الطموحات، وتُظهر كيف تتقاطع مصائرهم في ظل تغيّرات المجتمع المصري الحديث.</p>
-        <div class="buttons">
-          <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/عمارة يعقوبيان.jpg" alt="عمارة يعقوبيان">
+        <div>
+          <h3>عمارة يعقوبيان</h3>
+          <p>
+            تدور الرواية داخل عمارة قديمة في وسط القاهرة، وتعرض حياة سكانها من طبقات مختلفة؛ تكشف الفساد السياسي،
+            والفوارق الاجتماعية، وصراع الطموحات، وتُظهر كيف تتقاطع مصائرهم في ظل تغيّرات المجتمع المصري الحديث.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
       <!-- الرواية الثانية -->
-      <div class="card">
-        <img src="images/موسم الهجرة الى الشمال.png">
-        <h3>موسم الهجرة الى الشمال</h3>
-        <p>تحكي الرواية عن شاب سوداني يعود من أوروبا ليكتشف لغز مصطفى سعيد، الرجل الغامض الذي عاش تجربة صدام ثقافي قاسية في الغرب. تكشف الأحداث صراع الهوية بين الشرق والغرب، وانتهـاء مصطفى بشكل مأساوي، بينما يحاول الراوي فهم نفسه ومكانه بين العالمين.</p>
-        <div class="buttons">
-          <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/موسم الهجرة الى الشمال.png" alt="موسم الهجرة إلى الشمال">
+        <div>
+          <h3>موسم الهجرة الى الشمال</h3>
+          <p>
+            تحكي الرواية عن شاب سوداني يعود من أوروبا ليكتشف لغز مصطفى سعيد، الرجل الغامض الذي عاش تجربة صدام ثقافي
+            قاسية في الغرب. تكشف الأحداث صراع الهوية بين الشرق والغرب، وانتهـاء مصطفى بشكل مأساوي، بينما يحاول الراوي
+            فهم نفسه ومكانه بين العالمين.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
       <!-- الرواية الثالثة -->
-      <div class="card">
-        <img src="images/The Light We Lost.jpg">
-        <h3>The Light We Lost</h3>
-        <p>The novel follows Lucy and Gabe, whose intense love begins on 9/11. Their lives take different paths—Gabe becomes a photojournalist traveling the world, while Lucy builds a stable life with another man. Yet their connection never fully fades, leading to a bittersweet ending about love, timing, and the choices that shape our lives.</p>
-        <div class="buttons">
-          <a href="pdfs/The Light We Lost.pdf" class="read-btn">قراءة</a>
-          <a href="pdfs/The Light We Lost.pdf" class="download-btn">تحميل</a>
+      <div class="card horizontal">
+        <img src="images/The Light We Lost.jpg" alt="The Light We Lost">
+        <div>
+          <h3>The Light We Lost</h3>
+          <p>
+            The novel follows Lucy and Gabe, whose intense love begins on 9/11. Their lives take different paths—Gabe becomes a
+            photojournalist traveling the world, while Lucy builds a stable life with another man. Yet their connection never
+            fully fades, leading to a bittersweet ending about love, timing, and the choices that shape our lives.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/The Light We Lost.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/The Light We Lost.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
     </div>
   </main>
+
+  <!-- سكريبت الوضع الداكن -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
+
 </body>
 </html>

@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Story Glory — مكتبة إلكترونية لتحميل الكتب والروايات PDF">
-  <meta name="keywords" content="كتب, روايات, قصص, PDF, تحميل">
-  <meta name="author" content="Story Glory">
   <title>Story Glory — الرئيسية</title>
-  <!-- ربط ملف التنسيق -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="story_glory_style.css">
 </head>
+
 <body>
 
-  <!-- زرار تبديل الثيم -->
   <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-  <!-- Header -->
   <header>
     <h1>Story Glory</h1>
   </header>
 
-  <!-- Navbar -->
   <nav>
     <ul>
       <li><a href="#home">الرئيسية</a></li>
@@ -31,142 +26,158 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <main>
+  <section id="home">
+    <h2>مرحباً بك في Story Glory</h2>
+    <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
+    <a href="#books">استكشف الكتب الآن</a>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home">
-      <h2>مرحباً بك في Story Glory</h2>
-      <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
-      <a href="#books">استكشف الكتب الآن</a>
-    </section>
-
-    <div id="carouselExampleIndicators" class="carousel  m-5 p-5">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <div id="carouselExampleIndicators" class="carousel m-5 p-4">
+     <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./images/Dune.jpg" class="d-block w-100" alt="...">
+
+<div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/Hims.png" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="./images/story_glory_style-bg.jpg" class="d-block w-100" alt="...">
+        <img src="./images/welcome-banner.jpeg" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="./images/self-development.jpg" class="d-block w-100" alt="...">
+        <img src="./images/Team.png" class="d-block w-100 credits-img">
+>
+      </div>
     </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-    <!-- Categories Section -->
-    <section id="categories">
-      <h2>التصنيفات</h2>
-      <ul>
-        <li><a href="novels.html">روايات</a></li>
-        <li><a href="stories.html">قصص قصيرة</a></li>
-        <li><a href="history.html">تاريخ</a></li>
-        <li><a href="self-development.html">تنمية ذاتية</a></li>
-        <li><a href="horror.html">رعب</a></li>
-        <li><a href="sci-fi.html">خيال علمي</a></li>
-      </ul>
-    </section>
+  <section id="categories">
+    <h2>التصنيفات</h2>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>من نحن</h2>
-      <p>Story Glory هي مكتبة إلكترونية مجانية تتيح لك تحميل الكتب، الروايات والقصص بصيغة PDF بسهولة وسرعة.</p>
-    </section>
+    <ul class="categories-row">
+      <li><a href="novels.html">روايات</a></li>
+      <li><a href="stories.html">قصص قصيرة</a></li>
+      <li><a href="history.html">تاريخ</a></li>
+      <li><a href="self-development.html">تنمية ذاتية</a></li>
+      <li><a href="horror.html">رعب</a></li>
+      <li><a href="sci-fi.html">خيال علمي</a></li>
+    </ul>
+  </section>
 
-    <!-- Books Section -->
-    <section id="books">
-      <h2>
-        الكتب المتاحة للقراءة والتحميل<br>
-        المعهد العالي للعلوم الادارية بالقطامية<br>
-        شعبة نظم معلومات الاعمال<br>
-        المستوى الرابع<br>
-        2025-2026
-      </h2>
+  <section id="books">
+    <h2>الكتب المتاحة للقراءة والتحميل</h2>
 
-      <!-- الكتاب الأول -->
+    <div class="books-container">
+
+      <!-- كتاب 1 -->
       <div class="book-card">
-        <img src="images/تحليلات الاعمال و التنقيب في البيانات.PNG" alt="غلاف كتاب تحليلات الاعمال و التنقيب في البيانات">
-        <h3>BIS_2026_تحليلات الاعمال و التنقيب في البيانات</h3>
-        <p>تحليلات الاعمال و تنقيب البيانات تهدف لاستخدام البيانات الكبيرة لفهم أداء الشركات و تحديد قرارات حكيمة عبر تحليل الانماط و التوجهات و التنبؤ بالمستقبل و تحسين العمليات.</p>
-        <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
-        <a href="pdfs/تحليلات الاعمال و التنقيب في البيانات-BIS-2026.pdf" download>تحميل</a>
-        <div id="reader1" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/تحليلات الاعمال و التنقيب في البيانات-BIS-2026.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+        <img src="images/تحليلات الاعمال و التنقيب في البيانات.PNG">
+        <div>
+          <h3>BIS_2026_تحليلات الاعمال و التنقيب في البيانات</h3>
+          <p>تحليلات الاعمال و تنقيب البيانات تهدف لاستخدام البيانات الكبيرة لفهم أداء الشركات...</p>
+
+          <div class="buttons">
+            <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
+            <a href="pdfs/تحليلات الاعمال و التنقيب في البيانات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+
+          <div id="reader1" style="display:none; margin-top:10px;">
+            <iframe src="pdfs/تحليلات الاعمال و التنقيب في البيانات-BIS-2026.pdf" width="100%" height="600px"></iframe>
+            <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+          </div>
         </div>
       </div>
 
-      <!-- الكتاب الثاني -->
+      <!-- كتاب 2 -->
       <div class="book-card">
-        <img src="images/الاساليب الكمية و اتخاذ القرار.PNG" alt="غلاف كتاب الاساليب الكمية واتخاذ القرار">
-        <h3>BIS_2026_الاساليب الكمية و اتخاذ القرار</h3>
-        <p>استخدام الطرق الرياضية و الاحصائية لتحليل البيانات و حل المشكلات ، بهدف اختيار افضل الحلول و تحسين الاداء في المؤسسات.</p>
-        <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
-        <a href="pdfs/الاساليب الكمية و اتخاذ القرار-BIS-2026.pdf" download>تحميل</a>
-        <div id="reader2" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/ الاساليب الكمية و اتخاذ القرار-BIS-2026.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+        <img src="images/الاساليب الكمية و اتخاذ القرار.PNG">
+        <div>
+          <h3>BIS_2026_الاساليب الكمية و اتخاذ القرار</h3>
+          <p>استخدام الطرق الرياضية و الاحصائية لتحليل البيانات و حل المشكلات...</p>
+
+          <div class="buttons">
+            <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
+            <a href="pdfs/الاساليب الكمية و اتخاذ القرار-BIS-2026.pdf" download>تحميل</a>
+          </div>
+
+          <div id="reader2" style="display:none; margin-top:10px;">
+            <iframe src="pdfs/الاساليب الكمية و اتخاذ القرار-BIS-2026.pdf" width="122%" height="800px"></iframe>
+            <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+          </div>
         </div>
       </div>
 
-      <!-- الكتاب الثالث -->
+      <!-- كتاب 3 -->
       <div class="book-card">
-        <img src="images/انظمة معلومات المؤسسات.PNG" alt="غلاف كتاب انظمة معلومات المؤسسات">
-        <h3>BIS_2026_انظمة معلومات المؤسسات</h3>
-        <p>انظمة تجمع و تخزن و تحلل بيانات المؤسسة لدعم العمليات و تحسين اتخاذ القرار و زيادة كفاءة الاداء.</p>
-        <button onclick="document.getElementById('reader3').style.display='block'">قراءة</button>
-        <a href="pdfs/انظمةمعلومات المؤسسات-BIS-2026.pdf" download>تحميل</a>
-        <div id="reader3" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/انظمة معلومات المؤسسات-BIS-2026.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader3').style.display='none'">إغلاق القراءة</button>
+        <img src="images/انظمة معلومات المؤسسات.PNG">
+        <div>
+          <h3>BIS_2026_انظمة معلومات المؤسسات</h3>
+          <p>انظمة تجمع و تخزن و تحلل بيانات المؤسسة لدعم العمليات...</p>
+
+          <div class="buttons">
+            <button onclick="document.getElementById('reader3').style.display='block'">قراءة</button>
+            <a href="pdfs/انظمةمعلومات المؤسسات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+
+          <div id="reader3" style="display:none; margin-top:10px;">
+            <iframe src="pdfs/انظمة معلومات المؤسسات-BIS-2026.pdf" width="100%" height="600px"></iframe>
+            <button onclick="document.getElementById('reader3').style.display='none'">إغلاق القراءة</button>
+          </div>
         </div>
       </div>
 
-      <!-- الكتاب الرابع -->
+      <!-- كتاب 4 -->
       <div class="book-card">
-        <img src="images/مبادئ المالية العامة.PNG" alt="غلاف كتاب مبادئ المالية العامة">
-        <h3>BIS_2026_مبادئ المالية العامة</h3>
-        <p>دراسة كيفية ادارة الاموال العامة للدولة، تشمل جمع الايرادات و صرف النفقات، بهدف تحقيق استقرار اقتصادي و خدمة المجتمع.</p>
-        <button onclick="document.getElementById('reader4').style.display='block'">قراءة</button>
-        <a href="pdfs/مبادئ المالية العامة-BIS-2026.pdf" download>تحميل</a>
-        <div id="reader4" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/مبادئ المالية العامة-BIS-2026" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader4').style.display='none'">إغلاق القراءة</button>
+        <img src="images/مبادئ المالية العامة.PNG">
+        <div>
+          <h3>BIS_2026_مبادئ المالية العامة</h3>
+          <p>دراسة كيفية إدارة الأموال العامة للدولة...</p>
+
+          <div class="buttons">
+            <button onclick="document.getElementById('reader4').style.display='block'">قراءة</button>
+            <a href="pdfs/مبادئ المالية العامة-BIS-2026.pdf" download>تحميل</a>
+          </div>
+
+          <div id="reader4" style="display:none; margin-top:10px;">
+            <iframe src="pdfs/مبادئ المالية العامة-BIS-2026.pdf" width="100%" height="600px"></iframe>
+            <button onclick="document.getElementById('reader4').style.display='none'">إغلاق القراءة</button>
+          </div>
         </div>
       </div>
 
-      <!-- الكتاب الخامس -->
+      <!-- كتاب 5 -->
       <div class="book-card">
-        <img src="images/دراسات الجدوى الاقتصادية للمشروعات.PNG" alt="غلاف كتاب دراسات الجدوى الاقتصادية">
-        <h3>BIS_2026_دراسات الجدوى الاقتصادية</h3>
-        <p>تحليل مشروع قبل التنفيذ لمعرفة نسبة الربح و الخسارة و تحديد مدى نجاحه من الناحية المالية و التسويقية و الفنية.</p>
-        <button onclick="document.getElementById('reader5').style.display='block'">قراءة</button>
-        <a href="pdfs/دراسة الجدوى الاقتصادية للمشروعات-BIS-2026.pdf" download>تحميل</a>
-        <div id="reader5" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/ دراسات الجدوى الاقتصادية-BIS-2026.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader5').style.display='none'">إغلاق القراءة</button>
+        <img src="images/دراسات الجدوى الاقتصادية للمشروعات.PNG">
+        <div>
+          <h3>BIS_2026_دراسات الجدوى الاقتصادية</h3>
+          <p>تحليل مشروع قبل التنفيذ لمعرفة نسبة الربح والخسارة...</p>
+
+          <div class="buttons">
+            <button onclick="document.getElementById('reader5').style.display='block'">قراءة</button>
+            <a href="pdfs/دراسة الجدوى الاقتصادية للمشروعات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+
+          <div id="reader5" style="display:none; margin-top:10px;">
+            <iframe src="pdfs/دراسات الجدوى الاقتصادية-BIS-2026.pdf" width="100%" height="600px"></iframe>
+            <button onclick="document.getElementById('reader5').style.display='none'">إغلاق القراءة</button>
+          </div>
         </div>
       </div>
 
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <!-- Footer -->
   <footer>
     <p>© 2025 Story Glory — جميع الحقوق محفوظة</p>
   </footer>
@@ -177,15 +188,11 @@
       const button = document.querySelector(".theme-toggle");
 
       body.classList.toggle("dark");
-
-      // تغيير الأيقونة حسب الوضع
-      if (body.classList.contains("dark")) {
-        button.textContent = "☀️";
-      } else {
-        button.textContent = "🌙";
-      }
+      button.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
     }
   </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

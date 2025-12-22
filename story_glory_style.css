@@ -1,166 +1,248 @@
-
-/* متغيرات الألوان */
-:root {
-  --bg: #f5f7fa;
-  --text: #222;
-  --primary: #3b82f6;
-  --secondary: #10b981;
-  --dark-bg: #0f1217;
-  --dark-text: #eaeef6;
-  --transition: 0.3s ease;
-}
-
-/* الوضع الافتراضي (فاتح) */
+/* إعدادات عامة */
 body {
   margin: 0;
-  font-family: "Cairo", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: var(--transition);
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #000;
   direction: rtl;
 }
 
-/* الوضع الداكن */
-body.dark {
-  background: var(--dark-bg);
-  color: var(--dark-text);
-}
-
-/* زرار السويتش */
+/* زر تبديل الثيم */
 .theme-toggle {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background: var(--primary);
+  top: 15px;
+  left: 15px;
+  background: #007bff;
   color: #fff;
   border: none;
+  padding: 8px 12px;
   border-radius: 6px;
-  padding: 0.5rem 0.8rem;
   cursor: pointer;
   font-size: 1.2rem;
+  z-index: 999;
 }
 
 /* الهيدر */
 header {
-  background: var(--primary);
-  color: #fff;
-  padding: 1rem;
+  background-color: #ffffffd9;
+  padding: 15px;
   text-align: center;
-}
-header h1 {
-  margin: 0;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* النافبار */
-nav {
-  background: #1e293b;
-}
 nav ul {
   list-style: none;
+  padding: 10px;
   margin: 0;
-  padding: 0.5rem;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ffffffd9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-nav li {
-  margin: 0.3rem;
-}
+
 nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  transition: 0.2s;
+  padding: 5px 10px;
+  font-weight: bold;
 }
+
 nav a:hover {
-  background: #334155;
+  color: #007bff;
 }
 
-/* الأقسام */
-section {
-  padding: 2rem 1rem;
+/* قسم الترحيب */
+#home {
   text-align: center;
-}
-section h2 {
-  color: var(--primary);
-  margin-bottom: 0.8rem;
-}
-section p {
-  max-width: 700px;
-  margin: 0 auto 1rem;
+  padding: 30px 20px;
 }
 
-/* التصنيفات */
-#categories ul {
-  list-style: none;
-  padding: 0;
+#home a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#home a:hover {
+  background-color: #0056b3;
+}
+
+/* السلايدر */
+.carousel-item img {
+  width: 400%;
+  height: 800;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* التصنيفات عرضية */
+.categories-row {
   display: flex;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 0.6rem;
-}
-#categories li a {
-  background: #e2e8f0;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #222;
-  transition: 0.2s;
-}
-#categories li a:hover {
-  background: #cbd5e1;
+  padding: 0px;
+  margin: 0;
 }
 
-/* بطاقات الكتب */
-.book-card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 400px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.categories-row li {
+  list-style: none;
 }
-.book-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
-}
-.book-card h3 {
-  margin: 0.5rem 0;
-}
-.book-card p {
-  color: #555;
-}
-.book-card button,
-.book-card a {
-  display: inline-block;
-  margin: 0.4rem 0.2rem;
-  padding: 0.5rem 1rem;
+
+.categories-row a {
+  display: block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
   border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.categories-row a:hover {
+  background: #0056b3;
+}
+
+/* حاوية الكتب */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+/* كارت الكتاب */
+.book-card {
+  background-color: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: #000;
+}
+
+/* صورة الكتاب */
+.book-card img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* عنوان الكتاب */
+.book-card h3 {
+  margin: 10px 0;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+/* وصف الكتاب */
+.book-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* أزرار القراءة والتحميل */
+.book-card .buttons {
+  margin-top: 10px;
+}
+
+.book-card .buttons button,
+.book-card .buttons a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  text-decoration: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
-.book-card button {
-  background: var(--primary);
-  color: #fff;
-}
-.book-card button:hover {
-  background: #2563eb;
-}
-.book-card a {
-  background: var(--secondary);
-  color: #fff;
-}
-.book-card a:hover {
-  background: #059669;
+
+.book-card .buttons button:hover,
+.book-card .buttons a:hover {
+  background-color: #0056b3;
 }
 
 /* الفوتر */
 footer {
-  background: #1e293b;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #ffffffd9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* الوضع الداكن */
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark header {
+  background-color: rgba(20,20,20,0.9);
+  color: #fff;
+}
+
+body.dark nav ul {
+  background-color: rgba(20,20,20,0.9);
+}
+
+body.dark nav a {
+  color: #eee;
+}
+
+body.dark nav a:hover {
+  color: #4db6ff;
+}
+
+body.dark #home a {
+  background-color: #4db6ff;
+}
+
+body.dark #home a:hover {
+  background-color: #1e88e5;
+}
+
+body.dark .book-card {
+  background-color: rgba(20,20,20,0.85);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(77,182,255,0.4);
+}
+
+body.dark .book-card h3 {
+  color: #4db6ff;
+}
+
+body.dark .book-card p {
+  color: #ddd;
+}
+
+body.dark .book-card .buttons button,
+body.dark .book-card .buttons a {
+  background-color: #4db6ff;
+}
+
+body.dark .book-card .buttons button:hover,
+body.dark .book-card .buttons a:hover {
+  background-color: #1e88e5;
+}
+
+body.dark footer {
+  background-color: rgba(20,20,20,0.9);
   color: #fff;
 }

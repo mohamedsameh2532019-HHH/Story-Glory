@@ -1,76 +1,100 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>قسم القصص القصيرة - Story Glory</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="stories.css" />
 </head>
 <body class="stories">
 
-  <!-- Header -->
+  <!-- زر تبديل الثيم -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- رأس الصفحة -->
   <header>
     <h1>Story Glory</h1>
     <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="novels.html">روايات</a>
-      <a href="stories.html" class="active">قصص قصيرة</a>
-      <a href="history.html">تاريخ</a>
-     <a href="horror.html">رعب</a>
-      <a href="sci-fi.html">خيال علمي</a>
-    <a href="selfdev.html">تنمية ذاتية</a>
-
-     
-      
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="novels.html">روايات</a></li>
+        <li><a href="stories.html" class="active">قصص قصيرة</a></li>
+        <li><a href="history.html">تاريخ</a></li>
+        <li><a href="horror.html">رعب</a></li>
+        <li><a href="sci-fi.html">خيال علمي</a></li>
+        <li><a href="self-development.html">تنمية ذاتية</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- محتوى الصفحة -->
   <main>
-    <section class="books">
-      <h2>📖 قصص قصيرة</h2>
+    <h2>📖 قسم القصص القصيرة</h2>
+    <div class="cards-container">
 
-      <!-- قصة 1 -->
-      <div class="book-card">
-        <img src="images/البخلاء.jpg" alt="غلاف قصة قصيرة 1">
-        <h3>البخلاء</h3>
-        <p>يعرض الكتاب مواقف طريفة تحكي عن بخلاء في حياتهم اليومية، يكشف بها الجاحظ طباع الناس وتصرفاتهم عبر أسلوب ساخر وذكي يُضحك ويُنتقد في الوقت نفسه.</p>
-        <button onclick="document.getElementById('reader1').style.display='block'">قراءة</button>
-        <a href="pdfs/البخلاء_الجاحظ.pdf" download>تحميل</a>
-        <div id="reader1" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/البخلاء_الجاحظ.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader1').style.display='none'">إغلاق القراءة</button>
+      <!-- الكتاب الأول -->
+      <div class="card horizontal">
+        <img src="images/البخلاء.jpg" alt="غلاف البخلاء">
+        <div>
+          <h3>البخلاء</h3>
+          <p>
+            يعرض الكتاب مواقف طريفة تحكي عن بخلاء في حياتهم اليومية، يكشف بها الجاحظ طباع الناس وتصرفاتهم عبر أسلوب ساخر وذكي يُضحك ويُنتقد في الوقت نفسه.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/البخلاء_الجاحظ.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/البخلاء_الجاحظ.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
-      <!-- قصة 2 -->
-      <div class="book-card">
-        <img src="images/عودة الروح.jpg" alt="غلاف قصة قصيرة 2">
-        <h3>عودة الروح</h3>
-        <p>تحكي الرواية عن أسرة مصرية عادية تعيش أحداث ثورة 1919، وتُظهر كيف أيقظت الثورة الروح الوطنية لدى الشعب وجعلته يشعر بالوحدة والانتماء.</p>
-        <button onclick="document.getElementById('reader2').style.display='block'">قراءة</button>
-        <a href="pdfs/عودة الروح.pdf" download>تحميل</a>
-        <div id="reader2" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/عودة الروح.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader2').style.display='none'">إغلاق القراءة</button>
+      <!-- الكتاب الثاني -->
+      <div class="card horizontal">
+        <img src="images/عودة الروح.jpg" alt="غلاف عودة الروح">
+        <div>
+          <h3>عودة الروح</h3>
+          <p>
+            تحكي الرواية عن أسرة مصرية عادية تعيش في القاهرة عام 1919، وتظهر كيف أثرت ثورة الروح الوطنية لدى الشعب وجعلته يتحد من أجل الحرية والانتماء.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/عودة الروح.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/عودة الروح.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
-      <!-- قصة 3 -->
-      <div class="book-card">
-        <img src="images/Tenth Of December.jpg" alt="غلاف قصة قصيرة 3">
-        <h3>Tenth Of December</h3>
-        <p>The book is a collection of short stories that explore human kindness, moral choices, and loneliness, often set in strange or futuristic situations that highlight compassion and empathy.</p>
-        <button onclick="document.getElementById('reader3').style.display='block'">قراءة</button>
-        <a href="pdfs/Tenth-Of-December.pdf" download>تحميل</a>
-        <div id="reader3" style="display:none; margin-top:10px;">
-          <iframe src="pdfs/Tenth-Of-December.pdf" width="100%" height="600px"></iframe>
-          <button onclick="document.getElementById('reader3').style.display='none'">إغلاق القراءة</button>
+      <!-- الكتاب الثالث -->
+      <div class="card horizontal">
+        <img src="images/Tenth Of December.jpg" alt="Tenth Of December">
+        <div>
+          <h3>Tenth Of December</h3>
+          <p>
+            The book is a collection of short stories that explore human kindness, moral choices, and loneliness, often set in strange or futuristic situations that highlight compassion and empathy.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/Tenth-Of-December.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/Tenth-Of-December.pdf" class="download-btn">تحميل</a>
+          </div>
         </div>
       </div>
 
-    </section>
+    </div>
   </main>
+
+  <!-- سكريبت الوضع الداكن -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
+
 </body>
 </html>
