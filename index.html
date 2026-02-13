@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Glory — الرئيسية</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="story_glory_style.css">
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <header>
+    <h1>Story Glory</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#books">الكتب</a></li>
+      <li><a href="#categories">التصنيفات</a></li>
+      <li><a href="#about">من نحن</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>مرحباً بك في Story Glory</h2>
+    <p>اكتشف آلاف الكتب والروايات بصيغة PDF جاهزة للتحميل.</p>
+    <a href="#books">استكشف الكتب الآن</a>
+  </section>
+
+     <div id="carouselExampleIndicators" class="carousel m-5 p-4">
+     <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+  
+  </div>
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/Hims.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+        <img src="./images/welcome-banner.jpeg" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+        <img src="./images/team.png" class="d-block w-100 credits-img">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <section id="categories">
+    <h2>التصنيفات</h2>
+
+    <ul class="categories-row">
+      <li><a href="novels.html">روايات</a></li>
+      <li><a href="stories.html">قصص قصيرة</a></li>
+      <li><a href="history.html">تاريخ</a></li>
+      <li><a href="self-development.html">تنمية ذاتية</a></li>
+      <li><a href="horror.html">رعب</a></li>
+      <li><a href="sci-fi.html">خيال علمي</a></li>
+    </ul>
+  </section>
+
+  <section id="books">
+    <h2>الكتب المتاحة للقراءة والتحميل</h2>
+
+    <div class="books-container">
+
+      <div class="book-card">
+        <img src="images/تحليلات الاعمال و التنقيب في البيانات.PNG">
+        <div>
+          <h3>BIS_2026_تحليلات الاعمال و التنقيب في البيانات</h3>
+          <p>تحليلات الاعمال و تنقيب البيانات تهدف لاستخدام البيانات الكبيرة لفهم أداء الشركات...</p>
+
+          <div class="buttons">
+            <a href="pdfs/تحليلات الاعمال و التنقيب في البيانات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="images/الاساليب الكمية و اتخاذ القرار.PNG">
+        <div>
+          <h3>BIS_2026_الاساليب الكمية و اتخاذ القرار</h3>
+          <p>استخدام الطرق الرياضية و الاحصائية لتحليل البيانات و حل المشكلات...</p>
+
+          <div class="buttons">
+            <a href="pdfs/الاساليب الكمية و اتخاذ القرار-BIS-2026.pdf" download>تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="images/انظمة معلومات المؤسسات.PNG">
+        <div>
+          <h3>BIS_2026_انظمة معلومات المؤسسات</h3>
+          <p>انظمة تجمع و تخزن و تحلل بيانات المؤسسة لدعم العمليات...</p>
+
+          <div class="buttons">
+            <a href="pdfs/انظمةمعلومات المؤسسات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="images/مبادئ المالية العامة.PNG">
+        <div>
+          <h3>BIS_2026_مبادئ المالية العامة</h3>
+          <p>دراسة كيفية إدارة الأموال العامة للدولة...</p>
+
+          <div class="buttons">
+            <a href="pdfs/مبادئ المالية العامة-BIS-2026.pdf" download>تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="images/دراسات الجدوى الاقتصادية للمشروعات.PNG">
+        <div>
+          <h3>BIS_2026_دراسات الجدوى الاقتصادية</h3>
+          <p>تحليل مشروع قبل التنفيذ لمعرفة نسبة الربح والخسارة...</p>
+
+          <div class="buttons">
+            <a href="pdfs/دراسة الجدوى الاقتصادية للمشروعات-BIS-2026.pdf" download>تحميل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Story Glory — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+      button.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

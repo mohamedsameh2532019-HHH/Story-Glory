@@ -1,0 +1,129 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قسم الروايات - Story Glory</title>
+  <link rel="stylesheet" href="novels.css" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<button class="btn btn-dark m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+  ☰
+</button>
+
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <header>
+    <h1>Story Glory</h1>
+    <nav>
+      <ul>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">📚 الأقسام</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="nav flex-column text-end">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.html">الرئيسية</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-warning" href="novels.html">روايات</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="stories.html">قصص قصيرة</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="history.html">تاريخ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="horror.html">رعب</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="sci-fi.html">خيال علمي</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="self-development.html">تنمية ذاتية</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <h2 class="novels-title">قسم الروايات</h2>
+    <div class="cards-container">
+
+      <div class="card horizontal">
+        <img src="images/عمارة يعقوبيان.jpg" alt="عمارة يعقوبيان">
+        <div>
+          <h3>عمارة يعقوبيان</h3>
+          <p>
+            تدور الرواية داخل عمارة قديمة في وسط القاهرة، وتعرض حياة سكانها من طبقات مختلفة؛ تكشف الفساد السياسي،
+            والفوارق الاجتماعية، وصراع الطموحات، وتُظهر كيف تتقاطع مصائرهم في ظل تغيّرات المجتمع المصري الحديث.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/عمارة يعقوبيان-علاء الاسواني.pdf" class="download-btn">تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card horizontal">
+        <img src="images/موسم الهجرة الى الشمال.png" alt="موسم الهجرة إلى الشمال">
+        <div>
+          <h3>موسم الهجرة الى الشمال</h3>
+          <p>
+            تحكي الرواية عن شاب سوداني يعود من أوروبا ليكتشف لغز مصطفى سعيد، الرجل الغامض الذي عاش تجربة صدام ثقافي
+            قاسية في الغرب. تكشف الأحداث صراع الهوية بين الشرق والغرب، وانتهـاء مصطفى بشكل مأساوي، بينما يحاول الراوي
+            فهم نفسه ومكانه بين العالمين.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/موسم الهجرة الى الشمال.pdf" class="download-btn">تحميل</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card horizontal">
+        <img src="images/The Light We Lost.jpg" alt="The Light We Lost">
+        <div>
+          <h3>The Light We Lost</h3>
+          <p>
+            The novel follows Lucy and Gabe, whose intense love begins on 9/11. Their lives take different paths—Gabe becomes a
+            photojournalist traveling the world, while Lucy builds a stable life with another man. Yet their connection never
+            fully fades, leading to a bittersweet ending about love, timing, and the choices that shape our lives.
+          </p>
+          <div class="buttons">
+            <a href="pdfs/The Light We Lost.pdf" class="read-btn" target="_blank">قراءة</a>
+            <a href="pdfs/The Light We Lost.pdf" class="download-btn">تحميل</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector(".theme-toggle");
+
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        button.textContent = "☀️";
+      } else {
+        button.textContent = "🌙";
+      }
+    }
+  </script>
+</body>
+</html>
